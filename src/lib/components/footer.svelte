@@ -1,61 +1,112 @@
-<footer class="border-t border-gray-200 bg-gray-100 dark:border-gray-700/50 dark:bg-gray-800/50">
-	<div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
-		<div class="grid grid-cols-1 gap-8 md:grid-cols-4">
-			<div class="flex flex-col gap-4">
-				<h5 class="font-bold text-gray-900 dark:text-white">About Us</h5>
-				<a class="hover:text-primary text-sm text-gray-500 dark:text-gray-400" href="#">Our Story</a
-				>
-				<a class="hover:text-primary text-sm text-gray-500 dark:text-gray-400" href="#">Careers</a>
-				<a class="hover:text-primary text-sm text-gray-500 dark:text-gray-400" href="#">Press</a>
-			</div>
-			<div class="flex flex-col gap-4">
-				<h5 class="font-bold text-gray-900 dark:text-white">Customer Service</h5>
-				<a class="hover:text-primary text-sm text-gray-500 dark:text-gray-400" href="#">Contact</a>
-				<a class="hover:text-primary text-sm text-gray-500 dark:text-gray-400" href="#">FAQ</a>
-				<a class="hover:text-primary text-sm text-gray-500 dark:text-gray-400" href="#"
-					>Shipping &amp; Returns</a
-				>
-			</div>
-			<div class="flex flex-col gap-4">
-				<h5 class="font-bold text-gray-900 dark:text-white">Policies</h5>
-				<a class="hover:text-primary text-sm text-gray-500 dark:text-gray-400" href="#"
-					>Privacy Policy</a
-				>
-				<a class="hover:text-primary text-sm text-gray-500 dark:text-gray-400" href="#"
-					>Terms of Service</a
-				>
-			</div>
-			<div class="flex flex-col gap-4">
-				<h5 class="font-bold text-gray-900 dark:text-white">Follow Us</h5>
-				<div class="flex gap-4">
-					<a class="hover:text-primary text-gray-500 dark:text-gray-400" href="#">
-						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"
-							><path
-								d="M22.46,6.54a.5.5,0,0,0-.38-.2l-2.6-.08c-.2,0-.39.06-.55.18a4.8,4.8,0,0,0-3.42-3.42.6.6,0,0,0-.56-.18l-2.6.08a.5.5,0,0,0-.38.2L12,3.18,9.79,2.83a.5.5,0,0,0-.38-.2l-2.6.08c-.2,0-.39.06-.55.18A4.8,4.8,0,0,0,2.83,6.26a.6.6,0,0,0-.18.56l.08,2.6a.5.5,0,0,0,.2.38L3.18,12l-.35.21a.5.5,0,0,0-.2.38l-.08,2.6c0,.2.06.39.18.55a4.8,4.8,0,0,0,3.42,3.42c.16.12.35.18.55.18l2.6-.08a.5.5,0,0,0,.38-.2L12,20.82l2.21.35a.5.5,0,0,0,.38.2l2.6-.08c.2,0,.39-.06.55-.18a4.8,4.8,0,0,0,3.42-3.42c.12-.16.18-.35.18-.55l-.08-2.6a.5.5,0,0,0-.2-.38L20.82,12l.35-.21ZM12,17.5A5.5,5.5,0,1,1,17.5,12,5.5,5.5,0,0,1,12,17.5Zm6.5-6.5a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,18.5,11Z"
-							></path></svg
-						>
-					</a>
-					<a class="hover:text-primary text-gray-500 dark:text-gray-400" href="#">
-						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"
-							><path
-								d="M24,12c0,6.63-5.37,12-12,12S0,18.63,0,12,5.37,0,12,0,24,5.37,24,12ZM13,8.27V5.5a.5.5,0,0,0-1,0v2.77a.5.5,0,0,0,1,0Zm0,8.23V11a.5.5,0,0,0-1,0v5.5a.5.5,0,0,0,1,0Zm-4.5-4h-2a.5.5,0,0,0,0,1h2a.5.5,0,0,0,0-1Zm9.5,0h-2a.5.5,0,0,0,0,1h2a.5.5,0,0,0,0-1Z"
-							></path></svg
-						>
-					</a>
-					<a class="hover:text-primary text-gray-500 dark:text-gray-400" href="#">
-						<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"
-							><path
-								d="M22.46,6.54a.5.5,0,0,0-.38-.2l-2.6-.08c-.2,0-.39.06-.55.18a4.8,4.8,0,0,0-3.42-3.42.6.6,0,0,0-.56-.18l-2.6.08a.5.5,0,0,0-.38.2L12,3.18,9.79,2.83a.5.5,0,0,0-.38-.2l-2.6.08c-.2,0-.39.06-.55.18A4.8,4.8,0,0,0,2.83,6.26a.6.6,0,0,0-.18.56l.08,2.6a.5.5,0,0,0,.2.38L3.18,12l-.35.21a.5.5,0,0,0-.2.38l-.08,2.6c0,.2.06.39.18.55a4.8,4.8,0,0,0,3.42,3.42c.16.12.35.18.55.18l2.6-.08a.5.5,0,0,0,.38-.2L12,20.82l2.21.35a.5.5,0,0,0,.38.2l2.6-.08c.2,0,.39-.06.55-.18a4.8,4.8,0,0,0,3.42-3.42c.12-.16.18-.35.18-.55l-.08-2.6a.5.5,0,0,0-.2-.38L20.82,12l.35-.21Z"
-							></path></svg
-						>
-					</a>
-				</div>
-			</div>
+<script>
+	const links = [
+		{
+			title: 'Socials',
+			href: '/socials'
+		},
+		{
+			title: 'Products',
+			href: '/products'
+		},
+		{
+			title: 'Blog',
+			href: '/blog'
+		}
+	];
+</script>
+
+.
+<footer class="py-16 md:py-32">
+	<div class="mx-auto max-w-5xl px-6">
+		<h2 class="text-3xl font-bold text-balance md:text-4xl lg:text-5xl">
+			Frequently Asked Questions
+		</h2>
+		<!-- <a href="/" aria-label="go home" class="mx-auto block size-fit"> -->
+		MELLURE
+		<!-- <svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="22"
+				height="22"
+				viewBox="0 0 24 24"
+				fill="none"
+				role="img"
+				color="currentColor"
+			>
+				<path
+					d="M22 18C22 19.4001 22 20.1002 21.7275 20.635C21.4878 21.1054 21.1054 21.4878 20.635 21.7275C20.1002 22 19.4001 22 18 22C16.5999 22 15.8998 22 15.365 21.7275C14.8946 21.4878 14.5122 21.1054 14.2725 20.635C14 20.1002 14 19.4001 14 18C14 16.5999 14 15.8998 14.2725 15.365C14.5122 14.8946 14.8946 14.5122 15.365 14.2725C15.8998 14 16.5999 14 18 14C19.4001 14 20.1002 14 20.635 14.2725C21.1054 14.5122 21.4878 14.8946 21.7275 15.365C22 15.8998 22 16.5999 22 18Z"
+					stroke="currentColor"
+					stroke-width="1.5"
+				></path>
+				<path
+					d="M22 10C22 11.4001 22 12.1002 21.7275 12.635C21.4878 13.1054 21.1054 13.4878 20.635 13.7275C20.1002 14 19.4001 14 18 14C16.5999 14 15.8998 14 15.365 13.7275C14.8946 13.4878 14.5122 13.1054 14.2725 12.635C14 12.1002 14 11.4001 14 10C14 8.59987 14 7.8998 14.2725 7.36502C14.5122 6.89462 14.8946 6.51217 15.365 6.27248C15.8998 6 16.5999 6 18 6C19.4001 6 20.1002 6 20.635 6.27248C21.1054 6.51217 21.4878 6.89462 21.7275 7.36502C22 7.8998 22 8.59987 22 10Z"
+					stroke="currentColor"
+					stroke-width="1.5"
+				></path>
+				<path
+					d="M14 18C14 19.4001 14 20.1002 13.7275 20.635C13.4878 21.1054 13.1054 21.4878 12.635 21.7275C12.1002 22 11.4001 22 10 22C8.59987 22 7.8998 22 7.36502 21.7275C6.89462 21.4878 6.51217 21.1054 6.27248 20.635C6 20.1002 6 19.4001 6 18C6 16.5999 6 15.8998 6.27248 15.365C6.51217 14.8946 6.89462 14.5122 7.36502 14.2725C7.8998 14 8.59987 14 10 14C11.4001 14 12.1002 14 12.635 14.2725C13.1054 14.5122 13.4878 14.8946 13.7275 15.365C14 15.8998 14 16.5999 14 18Z"
+					stroke="currentColor"
+					stroke-width="1.5"
+				></path>
+				<path
+					opacity="0.4"
+					d="M10 6C10 7.40013 10 8.1002 9.72752 8.63497C9.48783 9.10538 9.10538 9.48783 8.63498 9.72752C8.1002 10 7.40013 10 6 10C4.59987 10 3.8998 10 3.36502 9.72751C2.89462 9.48783 2.51217 9.10538 2.27248 8.63497C2 8.10019 2 7.40013 2 6C2 4.59987 2 3.8998 2.27248 3.36502C2.51217 2.89462 2.89462 2.51217 3.36502 2.27248C3.8998 2 4.59987 2 6 2C7.40013 2 8.1002 2 8.63498 2.27248C9.10538 2.51217 9.48783 2.89462 9.72752 3.36502C10 3.8998 10 4.59987 10 6Z"
+					stroke="currentColor"
+					stroke-width="1.5"
+				></path>
+			</svg> -->
+		<!-- </a> -->
+
+		<div class="my-8 flex flex-wrap justify-center gap-6 text-sm">
+			{#each links as link}
+				<a href={link.href} class="text-muted-foreground hover:text-primary block duration-150">
+					<span>{link.title}</span>
+				</a>
+			{/each}
 		</div>
-		<div
-			class="mt-8 border-t border-gray-200 pt-8 text-center text-sm text-gray-500 dark:border-gray-700/50 dark:text-gray-400"
+		<div class="my-8 flex flex-wrap justify-center gap-6 text-sm">
+			<a
+				href="https://www.instagram.com/mellureszn"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Instagram"
+				class="text-muted-foreground hover:text-primary block"
+			>
+				<svg
+					class="size-6"
+					xmlns="http://www.w3.org/2000/svg"
+					width="1em"
+					height="1em"
+					viewBox="0 0 24 24"
+				>
+					<path
+						fill="currentColor"
+						d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+					></path>
+				</svg>
+			</a>
+			<a
+				href="https://www.tiktok.com/@mellureszn?_t=ZS-90sgz8ZSZ5&_r=1"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="TikTok"
+				class="text-muted-foreground hover:text-primary block"
+			>
+				<svg
+					class="size-6"
+					xmlns="http://www.w3.org/2000/svg"
+					width="1em"
+					height="1em"
+					viewBox="0 0 24 24"
+				>
+					<path
+						fill="currentColor"
+						d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
+					></path>
+				</svg>
+			</a>
+		</div>
+		<span class="text-muted-foreground block text-center text-sm">
+			© {new Date().getFullYear()} Mellure, All rights reserved</span
 		>
-			<p>© 2024 Minimalist. All rights reserved.</p>
-		</div>
 	</div>
 </footer>
