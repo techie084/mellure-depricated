@@ -1,10 +1,19 @@
 <script>
 	import Footer from '$lib/components/footer.svelte';
 	import Header from '$lib/components/header.svelte';
-	import Button from '$lib/components/button.svelte';
 	import ProductCategory from '$lib/components/productCategory.svelte';
 	import Product from '$lib/components/product.svelte';
 	import FAQ from '$lib/components/faq.svelte';
+	import SEO from '$lib/components/seo.svelte';
+	import { generateSEO } from '$lib/utils/seo';
+
+	const seo = generateSEO({
+		title: 'Mellure',
+		description: 'Welcome to our eCommerce store. Shop the latest products at great prices.',
+		keywords: ['e-commerce', 'shopping', 'products'],
+		type: 'website'
+	});
+	
 	let faqItems = [
 		{
 			id: 'item-1',
@@ -39,6 +48,8 @@
 	];
 </script>
 
+<SEO config={seo} />
+
 <Header />
 <main class="container mx-auto flex-grow px-4 py-8 sm:px-6 lg:px-8">
 	<div class="mb-12">
@@ -52,11 +63,11 @@
 				>
 					Discover the Latest Collection
 				</h2>
-				<Button name={'Shop Now'} />
-				<!-- <button
+
+				<button
 					class="bg-primary hover:bg-opacity-90 bg- mt-4 cursor-pointer rounded border px-6 py-3 text-lg font-semibold text-white transition-all"
 					>Shop Now</button
-				> -->
+				>
 			</div>
 		</div>
 	</div>

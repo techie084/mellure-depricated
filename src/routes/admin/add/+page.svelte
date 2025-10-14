@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	let name = '';
 	let description = '';
 	let price = 0;
@@ -62,4 +62,4 @@
 	>
 		{loading ? 'Adding...' : 'Add Product'}
 	</button>
-</form>
+</form> -->

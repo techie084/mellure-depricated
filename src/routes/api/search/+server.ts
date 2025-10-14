@@ -1,5 +1,4 @@
 // // src/routes/api/search/+server.ts
-// import { Client } from '@notionhq/client';
 // import { json } from '@sveltejs/kit';
 // import { env } from '$env/dynamic/private';
 

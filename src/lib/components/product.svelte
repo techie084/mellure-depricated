@@ -6,7 +6,7 @@
 				<img
 					alt="Contour Chair"
 					class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-					src="/chair.png"
+					src="chair.png"
 				/>
 			</div>
 			<div class="mt-4">
@@ -32,7 +32,7 @@
 				<img
 					alt="Lumina Floor Lamp"
 					class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-					src=""
+					src="lamp.png"
 				/>
 			</div>
 			<div class="mt-4">
@@ -45,7 +45,7 @@
 				<img
 					alt="Office Chair"
 					class="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-					src=""
+					src="office-chair.png"
 				/>
 			</div>
 			<div class="mt-4">

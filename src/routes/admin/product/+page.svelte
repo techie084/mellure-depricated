@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { onMount } from 'svelte';
 	let products: any[] | null | undefined = [];
 
@@ -29,4 +29,4 @@
 			</tr>
 		{/each}
 	</tbody>
-</table>
+</table> -->

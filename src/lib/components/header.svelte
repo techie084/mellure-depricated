@@ -1,45 +1,7 @@
 <script lang="ts">
 	import { toast } from 'svoast';
 	import { Search, ShoppingCartIcon, UserRound } from 'lucide-svelte';
-	import { writable, derived } from 'svelte/store';
-
-	interface Product {
-		id: number;
-		name: string;
-		description: string;
-		price: string;
-	}
-
-	const product = writable<Product[]>([
-		{
-			id: 1,
-			name: 'The Contour Chair',
-			description: 'Sleek design for modern living',
-			price: '$299'
-		},
-		{
-			id: 2,
-			name: 'The Essence Table',
-			description: 'Perfect for any dining space',
-			price: '$499'
-		},
-		{
-			id: 3,
-			name: 'The Lumina Floor Lamp',
-			description: 'Illuminate your room with style',
-			price: '$199'
-		}
-	]);
-
-	const query = writable<string>('');
-
-	// const filterProducts = derived(product, query, ([$product, $query]) => {
-	// 	$product.filter(
-	// 		(p) =>
-	// 			p.name.toLowerCase().includes($query.toLowerCase()) ||
-	// 			p.description.toLowerCase().includes($query.toLowerCase())
-	// 	);
-	// });
+	import { searchQuery, filteredProducts } from '../stores/productSearch.svelte';
 
 	async function launchToast() {
 		toast.success('Search feature coming soon!');
@@ -75,13 +37,15 @@
 				<button
 					class="cursor-pointer rounded-full p-2 transition-colors hover:bg-gray-200 dark:hover:bg-gray-700/50"
 					on:click={searchProducts}
-				>
-					<input
-						type="search"
-						name="Search"
-						class="border-rounded hidden bg-transparent outline-none"
-					/>
-					<Search />
+					><span class="relative w-full max-w-sm">
+						<input
+							type="search"
+							placeholder="Search products..."
+							class="border-rounded bg-transparent outline-none"
+							bind:value={$searchQuery}
+						/>
+						<Search class="absolute top-1/2 right-3 h-5 w-5 -translate-y-1/2 text-gray-400" />
+					</span>
 					<!-- <span class="material-symbols-outlined"> <Search /> </span> -->
 				</button>
 				<button
