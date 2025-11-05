@@ -1,9 +1,9 @@
-<div id="product-detail-page" class="page-content bg-background hidden min-h-screen">
-	<div class="bg-background/95 sticky top-0 z-40 border-b backdrop-blur">
+<!-- <div id="product-detail-page" class="page-content hidden min-h-screen bg-background">
+	<div class="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
 		<div class="container mx-auto px-4 py-4">
 			<button
 				id="product-back-btn"
-				class="hover:bg-accent flex h-10 w-10 items-center justify-center rounded-md transition-colors"
+				class="flex h-10 w-10 items-center justify-center rounded-md transition-colors hover:bg-accent"
 			>
 				<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path
@@ -15,24 +15,24 @@
 				</svg>
 			</button>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="container mx-auto px-4 py-8 md:py-12">
+	<!-- <div class="container mx-auto px-4 py-8 md:py-12">
 		<div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 lg:gap-12">
-			<!-- Image -->
+
 			<div
 				id="product-image-container"
-				class="bg-secondary aspect-square overflow-hidden rounded-lg"
+				class="aspect-square overflow-hidden rounded-lg bg-secondary"
 			>
 				<img id="product-detail-image" src="" alt="" class="h-full w-full object-cover" />
 			</div>
 
-			<!-- Details -->
+		
 			<div class="space-y-6">
 				<div>
 					<span
 						id="product-detail-category"
-						class="border-input mb-3 inline-block rounded-full border px-2.5 py-0.5 text-xs"
+						class="mb-3 inline-block rounded-full border border-input px-2.5 py-0.5 text-xs"
 					></span>
 					<h1 id="product-detail-name" class="mb-3 text-3xl md:text-4xl"></h1>
 					<p id="product-detail-price" class="text-2xl md:text-3xl"></p>
@@ -40,19 +40,19 @@
 
 				<span
 					id="product-detail-stock"
-					class="bg-destructive text-destructive-foreground hidden inline-block rounded-full px-2.5 py-0.5 text-xs"
+					class="hidden inline-block rounded-full bg-destructive px-2.5 py-0.5 text-xs text-destructive-foreground"
 					>Out of Stock</span
 				>
 
-				<p id="product-detail-description" class="text-muted-foreground leading-relaxed"></p>
+				<p id="product-detail-description" class="leading-relaxed text-muted-foreground"></p>
 
 				<div class="space-y-4">
 					<div>
 						<h3 class="mb-3 text-sm">Features</h3>
 						<ul class="space-y-2">
-							<li class="text-muted-foreground flex items-center gap-2 text-sm">
+							<li class="flex items-center gap-2 text-sm text-muted-foreground">
 								<svg
-									class="text-primary h-4 w-4 flex-shrink-0"
+									class="h-4 w-4 flex-shrink-0 text-primary"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -66,9 +66,9 @@
 								</svg>
 								Premium quality materials
 							</li>
-							<li class="text-muted-foreground flex items-center gap-2 text-sm">
+							<li class="flex items-center gap-2 text-sm text-muted-foreground">
 								<svg
-									class="text-primary h-4 w-4 flex-shrink-0"
+									class="h-4 w-4 flex-shrink-0 text-primary"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -82,9 +82,9 @@
 								</svg>
 								UV protection included
 							</li>
-							<li class="text-muted-foreground flex items-center gap-2 text-sm">
+							<li class="flex items-center gap-2 text-sm text-muted-foreground">
 								<svg
-									class="text-primary h-4 w-4 flex-shrink-0"
+									class="h-4 w-4 flex-shrink-0 text-primary"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -98,9 +98,9 @@
 								</svg>
 								Adjustable nose pads
 							</li>
-							<li class="text-muted-foreground flex items-center gap-2 text-sm">
+							<li class="flex items-center gap-2 text-sm text-muted-foreground">
 								<svg
-									class="text-primary h-4 w-4 flex-shrink-0"
+									class="h-4 w-4 flex-shrink-0 text-primary"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -114,9 +114,9 @@
 								</svg>
 								Durable frame construction
 							</li>
-							<li class="text-muted-foreground flex items-center gap-2 text-sm">
+							<li class="flex items-center gap-2 text-sm text-muted-foreground">
 								<svg
-									class="text-primary h-4 w-4 flex-shrink-0"
+									class="h-4 w-4 flex-shrink-0 text-primary"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -130,9 +130,9 @@
 								</svg>
 								Lightweight design
 							</li>
-							<li class="text-muted-foreground flex items-center gap-2 text-sm">
+							<li class="flex items-center gap-2 text-sm text-muted-foreground">
 								<svg
-									class="text-primary h-4 w-4 flex-shrink-0"
+									class="h-4 w-4 flex-shrink-0 text-primary"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -175,7 +175,7 @@
 				<div class="space-y-3 pt-6">
 					<button
 						id="product-add-to-cart"
-						class="bg-primary text-primary-foreground hover:bg-primary/90 flex w-full items-center justify-center gap-2 rounded-md px-4 py-3 transition-colors"
+						class="flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-primary-foreground transition-colors hover:bg-primary/90"
 					>
 						<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path
@@ -187,11 +187,11 @@
 						</svg>
 						<span id="product-add-to-cart-text">Add to Cart</span>
 					</button>
-					<p class="text-muted-foreground text-center text-xs">
+					<p class="text-center text-xs text-muted-foreground">
 						Free shipping on orders over $100 · 30-day returns
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->

@@ -1,27 +1,7 @@
 <script lang="ts">
-	let openMobileMenu = () => {
-		const mobileMenu = document.getElementById('mobile-menu');
-		const mobileMenuContent = document.getElementById('mobile-menu-content');
+	import NavBar from './navbar.svelte';
 
-		if (mobileMenu && mobileMenuContent) {
-			mobileMenu.classList.remove('hidden');
-			setTimeout(() => {
-				mobileMenuContent.classList.remove('translate-x-full');
-			}, 10);
-		}
-	};
-
-	function closeMobileMenu() {
-		const mobileMenuContent = document.getElementById('mobile-menu-content');
-		const mobileMenu = document.getElementById('mobile-menu');
-
-		if (mobileMenuContent && mobileMenu) {
-			mobileMenuContent.classList.add('translate-x-full');
-			setTimeout(() => {
-				mobileMenu.classList.add('hidden');
-			}, 300);
-		}
-	}
+	// import { page } from '$app/state';
 </script>
 
 <header
@@ -71,10 +51,9 @@
 			<!-- svelte-ignore a11y_consider_explicit_label -->
 			<!-- svelte-ignore a11y_click_events_have_key_events -->
 			<!-- svelte-ignore a11y_no_static_element_interactions -->
-			<span
+			<!-- <span
 				id="mobile-menu-btn"
 				class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-md transition-colors hover:bg-accent md:hidden"
-				on:click={() => !openMobileMenu}
 			>
 				<svg class="h-5 w-5 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path
@@ -84,7 +63,9 @@
 						d="M4 6h16M4 12h16M4 18h16"
 					/>
 				</svg>
-			</span>
+			</span> -->
+
+			<NavBar />
 		</div>
 	</div>
 </header>

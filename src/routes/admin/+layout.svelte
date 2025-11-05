@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	let isOpen = $state(true);
 </script>
 
@@ -226,4 +226,4 @@
 
 <div>
 	{render(children?.())}
-</div>
+</div> -->

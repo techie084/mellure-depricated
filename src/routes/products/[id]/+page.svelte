@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import SEO from '$lib/components/seo.svelte';
 	import { generateSEO } from '$lib/utils/seo';
 	import type { PageData } from './$types';
@@ -28,4 +28,4 @@
 <div class="product-page">
 	<h1>{product.name}</h1>
 	<p>${product.price}</p>
-</div>
+</div> -->

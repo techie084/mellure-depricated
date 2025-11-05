@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	const productCategory = [
 		{
 			title: 'Living Room',
@@ -23,7 +23,7 @@
 		{/each}
 	</div>
 </section>
-<!-- <div class="group aspect-w-1 aspect-h-1 relative">
+<div class="group aspect-w-1 aspect-h-1 relative">
     <img alt="Bedroom" class="h-full w-full rounded-lg object-cover" src="" />
     <div
       class="bg-opacity-20 group-hover:bg-opacity-40 absolute inset-0 flex items-center justify-center rounded-lg bg-black transition-all"

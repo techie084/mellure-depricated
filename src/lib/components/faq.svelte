@@ -1,4 +1,4 @@
-<section class="py-16 md:py-24">
+<!-- <section class="py-16 md:py-24">
 	<div class="mx-auto max-w-5xl px-4 md:px-6">
 		<div class="mx-auto max-w-xl text-center">
 			<h2 class="text-3xl font-bold text-balance md:text-4xl lg:text-5xl">
@@ -10,8 +10,8 @@
 			</p>
 		</div>
 
-		<div class="mx-auto mt-12 max-w-xl">
-			<!-- <Accordion
+		<div class="mx-auto mt-12 max-w-xl"> -->
+<!-- <Accordion
 				type="single"
 				class="bg-card ring-muted w-full rounded-2xl border px-8 py-3 shadow-sm ring-4 dark:ring-0"
 			>
@@ -30,10 +30,10 @@
 				{/each}
 			</Accordion> -->
 
-			<p class="text-muted-foreground mt-6 px-4">
+<!-- <p class="text-muted-foreground mt-6 px-4">
 				Can't find what you're looking for? Contact our{' '}
 				<a href="/" class="text-primary font-medium hover:underline"> customer support team </a>
 			</p>
 		</div>
 	</div>
-</section>
+</section> -->

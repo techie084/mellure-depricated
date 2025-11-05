@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { on } from 'events';
 
 	interface productFilter {
@@ -30,4 +30,4 @@
 			<option value={category}>{category}</option>
 		{/each}
 	</select>
-</div>
+</div> -->

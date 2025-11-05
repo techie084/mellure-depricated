@@ -1,4 +1,4 @@
-<section class="mb-12">
+<!-- <section class="mb-12">
 	<h3 class="mb-6 text-2xl font-bold text-gray-900 dark:text-white">Featured Products</h3>
 	<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 		<div class="group">
@@ -54,4 +54,4 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->

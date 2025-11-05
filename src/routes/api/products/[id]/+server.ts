@@ -1,88 +1,88 @@
-import { json } from '@sveltejs/kit';
-import type { RequestHandler } from './$types';
-import { db } from '$lib/server/db';
-import { products } from '$lib/server/db/schema';
-import { eq } from 'drizzle-orm';
-import { handleError, AppError } from '$lib/utils/errors';
-import { productUpdateSchema } from '$lib/validation/product';
-import { z } from 'zod';
+// import { json } from '@sveltejs/kit';
+// import type { RequestHandler } from './$types';
+// import { db } from '$lib/server/db';
+// import { products } from '$lib/server/db/schema';
+// import { eq } from 'drizzle-orm';
+// import { handleError, AppError } from '$lib/utils/errors';
+// import { productUpdateSchema } from '$lib/validation/product';
+// import { z } from 'zod';
 
-// Validate ID param
-const idSchema = z.coerce.number().int().positive();
+// // Validate ID param
+// const idSchema = z.coerce.number().int().positive();
 
-export const GET: RequestHandler = async ({ params }) => {
-  try {
-    const id = idSchema.parse(params.id);
+// export const GET: RequestHandler = async ({ params }) => {
+//   try {
+//     const id = idSchema.parse(params.id);
 
-    const product = await db
-      .select()
-      .from(products)
-      .where(eq(products.id, id))
-      .get();
+//     const product = await db
+//       .select()
+//       .from(products)
+//       .where(eq(products.id, id))
+//       .get();
 
-    if (!product) {
-      throw new AppError('Product not found', 404, 'PRODUCT_NOT_FOUND');
-    }
+//     if (!product) {
+//       throw new AppError('Product not found', 404, 'PRODUCT_NOT_FOUND');
+//     }
 
-    return json({ product });
-  } catch (error) {
-    return handleError(error);
-  }
-};
+//     return json({ product });
+//   } catch (error) {
+//     return handleError(error);
+//   }
+// };
 
-export const PATCH: RequestHandler = async ({ params, request }) => {
-  try {
-    const id = idSchema.parse(params.id);
-    const body = await request.json();
-    
-    // Validate update data
-    const validatedData = productUpdateSchema.parse(body);
+// export const PATCH: RequestHandler = async ({ params, request }) => {
+//   try {
+//     const id = idSchema.parse(params.id);
+//     const body = await request.json();
 
-    // Check if product exists
-    const existing = await db
-      .select()
-      .from(products)
-      .where(eq(products.id, id))
-      .get();
+//     // Validate update data
+//     const validatedData = productUpdateSchema.parse(body);
 
-    if (!existing) {
-      throw new AppError('Product not found', 404, 'PRODUCT_NOT_FOUND');
-    }
+//     // Check if product exists
+//     const existing = await db
+//       .select()
+//       .from(products)
+//       .where(eq(products.id, id))
+//       .get();
 
-    // Update product
-    const updated = await db
-      .update(products)
-      .set({
-        ...validatedData,
-        updatedAt: new Date()
-      })
-      .where(eq(products.id, id))
-      .returning();
+//     if (!existing) {
+//       throw new AppError('Product not found', 404, 'PRODUCT_NOT_FOUND');
+//     }
 
-    return json({ product: updated[0] });
-  } catch (error) {
-    return handleError(error);
-  }
-};
+//     // Update product
+//     const updated = await db
+//       .update(products)
+//       .set({
+//         ...validatedData,
+//         updatedAt: new Date()
+//       })
+//       .where(eq(products.id, id))
+//       .returning();
 
-export const DELETE: RequestHandler = async ({ params }) => {
-  try {
-    const id = idSchema.parse(params.id);
+//     return json({ product: updated[0] });
+//   } catch (error) {
+//     return handleError(error);
+//   }
+// };
 
-    const existing = await db
-      .select()
-      .from(products)
-      .where(eq(products.id, id))
-      .get();
+// export const DELETE: RequestHandler = async ({ params }) => {
+//   try {
+//     const id = idSchema.parse(params.id);
 
-    if (!existing) {
-      throw new AppError('Product not found', 404, 'PRODUCT_NOT_FOUND');
-    }
+//     const existing = await db
+//       .select()
+//       .from(products)
+//       .where(eq(products.id, id))
+//       .get();
 
-    await db.delete(products).where(eq(products.id, id));
+//     if (!existing) {
+//       throw new AppError('Product not found', 404, 'PRODUCT_NOT_FOUND');
+//     }
 
-    return json({ message: 'Product deleted successfully' });
-  } catch (error) {
-    return handleError(error);
-  }
-};
+//     await db.delete(products).where(eq(products.id, id));
+
+//     return json({ message: 'Product deleted successfully' });
+//   } catch (error) {
+//     return handleError(error);
+//   }
+// };

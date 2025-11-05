@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import type { SEOConfig } from '$lib/utils/seo';
 	import { generateStructuredData } from '$lib/utils/seo';
 	import { page } from '$app/stores';
@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<!-- Primary Meta Tags -->
+	Primary Meta Tags
 	<title>{config.title}</title>
 	<meta name="title" content={config.title} />
 	<meta name="description" content={config.description} />
@@ -25,10 +25,10 @@
 	{/if}
 	<meta name="robots" content={robotsContent} />
 
-	<!-- Canonical URL -->
+	Canonical URL
 	<link rel="canonical" href={config.canonical || currentUrl} />
 
-	<!-- Open Graph / Facebook -->
+	Open Graph / Facebook
 	<meta property="og:type" content={config.type || 'website'} />
 	<meta property="og:url" content={currentUrl} />
 	<meta property="og:title" content={config.title} />
@@ -37,7 +37,7 @@
 		<meta property="og:image" content={config.image} />
 	{/if}
 
-	<!-- Twitter -->
+	Twitter
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content={currentUrl} />
 	<meta property="twitter:title" content={config.title} />
@@ -46,7 +46,7 @@
 		<meta property="twitter:image" content={config.image} />
 	{/if}
 
-	<!-- Article/Blog specific -->
+	Article/Blog specific
 	{#if config.type === 'article'}
 		{#if config.publishedTime}
 			<meta property="article:published_time" content={config.publishedTime} />
@@ -59,6 +59,6 @@
 		{/if}
 	{/if}
 
-	<!-- Structured Data (JSON-LD) -->
+	Structured Data (JSON-LD)
 	{@html `<script type="application/ld+json">${JSON.stringify(structuredData)}<\/script>`}
-</svelte:head>
+</svelte:head> -->

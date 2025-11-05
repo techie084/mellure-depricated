@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	const links = [
 		{
 			title: 'Home',
@@ -72,4 +72,4 @@
 			© {new Date().getFullYear()} Mellure, All rights reserved</span
 		>
 	</div>
-</footer>
+</footer> -->
