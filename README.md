@@ -1,4 +1,5 @@
-# Mellure 
-### Your aura amplified 🩷
+# Mellure
 
-##Website for a luxury brand that sells glasses 🤓
+## Your aura amplified 🩷
+
+## Website for a luxury brand that sells glasses 🤓

@@ -1,59 +1,90 @@
 <script lang="ts">
-	import { toast } from 'svoast';
-	import { Search, ShoppingCartIcon, UserRound } from 'lucide-svelte';
-	import { searchQuery, filteredProducts } from '../stores/productSearch.svelte';
+	let openMobileMenu = () => {
+		const mobileMenu = document.getElementById('mobile-menu');
+		const mobileMenuContent = document.getElementById('mobile-menu-content');
 
-	async function launchToast() {
-		toast.success('Search feature coming soon!');
-	}
-
-	const searchProducts = () => {
-		launchToast();
+		if (mobileMenu && mobileMenuContent) {
+			mobileMenu.classList.remove('hidden');
+			setTimeout(() => {
+				mobileMenuContent.classList.remove('translate-x-full');
+			}, 10);
+		}
 	};
+
+	function closeMobileMenu() {
+		const mobileMenuContent = document.getElementById('mobile-menu-content');
+		const mobileMenu = document.getElementById('mobile-menu');
+
+		if (mobileMenuContent && mobileMenu) {
+			mobileMenuContent.classList.add('translate-x-full');
+			setTimeout(() => {
+				mobileMenu.classList.add('hidden');
+			}, 300);
+		}
+	}
 </script>
 
-<header class="border-b border-gray-200 dark:border-gray-700/50">
-	<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="flex h-16 items-center justify-between">
-			<!--  -->
-			<div class="flex items-center gap-4">
-				<h1 class="text-xl font-bold text-gray-900 dark:text-white">MELLURE</h1>
-			</div>
+<header
+	id="main-header"
+	class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60"
+>
+	<div class="container mx-auto flex h-16 items-center justify-between px-4">
+		<div class="flex items-center gap-6">
+			<button id="logo-btn" class="transition-opacity hover:opacity-80">
+				<h1 class="cursor-pointer text-xl">Mellure</h1>
+			</button>
+		</div>
 
-			<!--  -->
-			<nav class="hidden items-center gap-8 md:flex">
-				<a class="hover:text-primary text-sm font-medium transition-colors" href="/">New Arrivals</a
+		<div class="flex items-center gap-4">
+			<!-- svelte-ignore a11y_consider_explicit_label -->
+			<button
+				id="account-btn"
+				class="hidden h-10 w-10 items-center justify-center rounded-md transition-colors hover:bg-accent md:flex"
+			>
+				<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+					/>
+				</svg>
+			</button>
+			<button
+				id="cart-btn"
+				class="relative hidden h-10 w-10 items-center justify-center rounded-md transition-colors hover:bg-accent md:flex"
+			>
+				<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+					/>
+				</svg>
+				<span
+					id="cart-badge"
+					class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary p-0 text-xs text-primary-foreground"
+					>0</span
 				>
-				<a class="hover:text-primary text-sm font-medium transition-colors" href="/">Featured</a>
-				<a class="hover:text-primary text-sm font-medium transition-colors" href="/">Sale</a>
-			</nav>
-
-			<!--  -->
-			<div class="flex items-center gap-2">
-				<button
-					class="bg-primary/20 dark:bg-primary/30 text-primary hover:bg-primary/30 dark:hover:bg-primary/40 hidden items-center justify-center rounded px-4 py-2 text-sm font-medium transition-colors md:inline-flex"
-					><UserRound /></button
-				>
-				<button
-					class="cursor-pointer rounded-full p-2 transition-colors hover:bg-gray-200 dark:hover:bg-gray-700/50"
-					on:click={searchProducts}
-					><span class="relative w-full max-w-sm">
-						<input
-							type="search"
-							placeholder="Search products..."
-							class="border-rounded bg-transparent outline-none"
-							bind:value={$searchQuery}
-						/>
-						<Search class="absolute top-1/2 right-3 h-5 w-5 -translate-y-1/2 text-gray-400" />
-					</span>
-					<!-- <span class="material-symbols-outlined"> <Search /> </span> -->
-				</button>
-				<button
-					class="rounded-full p-2 transition-colors hover:bg-gray-200 dark:hover:bg-gray-700/50"
-				>
-					<span class="material-symbols-outlined"> <ShoppingCartIcon /> </span>
-				</button>
-			</div>
+			</button>
+			<!-- svelte-ignore a11y_consider_explicit_label -->
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
+			<span
+				id="mobile-menu-btn"
+				class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-md transition-colors hover:bg-accent md:hidden"
+				on:click={() => !openMobileMenu}
+			>
+				<svg class="h-5 w-5 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M4 6h16M4 12h16M4 18h16"
+					/>
+				</svg>
+			</span>
 		</div>
 	</div>
 </header>
