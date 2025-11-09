@@ -1,4 +1,6 @@
-<script lang="ts"></script>
+<script lang="ts">
+
+</script>
 
 <section class="container mx-auto px-4 py-12">
 	<div

@@ -11,6 +11,14 @@ const config = {
 		prerender: {
 			entries: ['*', '/sitemap.xml', '/robots.txt'],
 			crawl: true
+		},
+		experimental: {
+			remoteFunctions: true
+		}
+	},
+	compilerOptions: {
+		experimental: {
+			async: true
 		}
 	}
 };

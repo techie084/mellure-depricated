@@ -1,5 +1,5 @@
-<script lang="ts">
-	import SEO from '$lib/components/seo.svelte';
+<!-- <script lang="ts">
+	import SEO from '$lib/components/shared/seo.svelte';
 	import { generateSEO } from '$lib/utils/seo';
 	import type { PageData } from './$types';
 
@@ -16,4 +16,4 @@
 
 <SEO config={seo} />
 
-<h1>{data.category} Products</h1>
+<h1>{data.category} Products</h1> -->
