@@ -8,14 +8,14 @@
 
 ## 📋 Table of Contents
 
-1. [Overview](#overview)
-2. [Tech Stack & Libraries](#tech-stack)
-3. [Stage 1: Planning](#stage-1-planning)
-4. [Stage 2: Building](#stage-2-building)
-5. [Stage 3: Testing](#stage-3-testing)
-6. [Stage 4: Deployment](#stage-4-deployment)
-7. [Design Resources](#design-resources)
-8. [Troubleshooting](#troubleshooting)
+1. [Overview](/overview)
+2. [Tech Stack & Libraries](/tech-stack)
+3. [Stage 1: Planning](/stage-1-planning)
+4. [Stage 2: Building](/stage-2-building)
+5. [Stage 3: Testing](/stage-3-testing)
+6. [Stage 4: Deployment](/stage-4-deployment)
+7. [Design Resources](/design-resources)
+8. [Troubleshooting](/troubleshooting)
 
 ---
 

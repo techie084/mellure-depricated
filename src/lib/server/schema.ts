@@ -18,11 +18,11 @@ export const products = sqliteTable('products', {
 export const users = sqliteTable('users', {
 	id: integer('id').primaryKey({}),
 	email: text('email').notNull().unique(),
-  name: text('name'),
-  emailVerified: integer('email_verified'),         
-  image: text('image'),
-  createdAt: integer('created_at', { mode: 'timestamp' }).default(sql`(unixepoch())`),
-  updatedAt: integer('updated_at', { mode: 'timestamp' }).default(sql`(unixepoch())`) 
+	name: text('name'),
+	emailVerified: integer('email_verified'),
+	image: text('image'),
+	createdAt: integer('created_at', { mode: 'timestamp' }).default(sql`(unixepoch())`),
+	updatedAt: integer('updated_at', { mode: 'timestamp' }).default(sql`(unixepoch())`)
 });
 
 export type Product = typeof products.$inferSelect;

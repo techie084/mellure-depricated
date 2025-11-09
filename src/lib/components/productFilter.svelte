@@ -1,7 +1,7 @@
 <script lang="ts">
 	// import { activeFilter, products } from '$lib/stores/FilterStore.svelte';
 	let categories: string[] = ['All', 'Sunglasses', 'Eyeglasses', 'Reading', 'Sports', 'Vintage'];
-	// let active =
+	let active = categories[0];
 
 	const activeTab = (e: any) => {
 		console.log(e, 'button clicked');
