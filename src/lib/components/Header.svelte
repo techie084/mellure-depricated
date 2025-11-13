@@ -9,7 +9,6 @@
 	<nav class="container mx-auto flex h-16 items-center justify-between px-4">
 		<div class="flex items-center gap-6">
 			<a
-				id="logo-button"
 				href="/"
 				aria-labelledby="Logo"
 				class="text-2xl font-bold transition-opacity hover:opacity-80">Mellure</a
@@ -19,7 +18,6 @@
 		<div class="flex items-center gap-2">
 			<a
 				href="/user"
-				id="account-btn"
 				aria-label="Account"
 				class="h-10 w-10 cursor-pointer items-center justify-center rounded-md p-2 transition-colors hover:bg-accent md:flex"
 			>

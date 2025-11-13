@@ -4,7 +4,7 @@
 <section class="bg-secondary/50">
 	<div class="container mx-auto px-4 py-20 md:py-32">
 		<div class="mx-auto max-w-3xl space-y-6 text-center">
-			<h1 class="text-4xl tracking-tight md:text-6xl lg:text-7xl">
+			<h1 class="text-4xl font-semibold tracking-tight md:text-6xl lg:text-7xl">
 				<!-- Premium Eye-wear,<br />Timeless Style -->
 				See the World in Perfect Clarity 🤓
 			</h1>

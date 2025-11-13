@@ -1,12 +1,13 @@
 import { betterAuth } from 'better-auth';
-// import * as schema from './schema';
-// import { drizzleAdapter } from 'better-auth/adapters/drizzle';
-// import { db } from './db';
+import { drizzleAdapter } from 'better-auth/adapters/drizzle';
+import { db } from './db';
+import * as schema from './schema';
 import { BETTER_AUTH_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } from '$env/static/private';
 
 const _auth = betterAuth({
 	emailAndPassword: {
-		enabled: true
+		enabled: true,
+		requireEmailVerification: true
 	},
 	socialProviders: {
 		google: {
@@ -14,11 +15,11 @@ const _auth = betterAuth({
 			clientSecret: GOOGLE_CLIENT_SECRET
 		}
 	},
-	secret: BETTER_AUTH_SECRET
-	// database: drizzleAdapter(db, {
-	// 	provider: 'sqlite',
-	// 	schema: schema
-	// })
+	secret: BETTER_AUTH_SECRET,
+	database: drizzleAdapter(db, {
+		provider: 'sqlite',
+		schema
+	})
 });
 
 export const auth = _auth;

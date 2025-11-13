@@ -1,11 +1,17 @@
 <script lang="ts">
 	// import { activeFilter, products } from '$lib/stores/FilterStore.svelte';
-	let categories: string[] = ['All', 'Sunglasses', 'Eyeglasses', 'Reading', 'Sports', 'Vintage'];
-	let active = categories[0];
+	let categories: string[] = $state([
+		'All',
+		'Sunglasses',
+		'Eyeglasses',
+		'Reading',
+		'Sports',
+		'Vintage'
+	]);
 
-	const activeTab = (e: any) => {
-		console.log(e, 'button clicked');
-	};
+	$effect(() => {
+		console.log(categories);
+	});
 </script>
 
 <section class="sticky top-16 z-40 border-b bg-background/95 backdrop-blur">
@@ -13,9 +19,8 @@
 		<div id="category-filters" class="scrollbar-hide flex gap-2 overflow-x-auto">
 			{#each categories as category}
 				<button
-					class="category-btn active cursor-pointer"
-					data-category={category}
-					onclick={activeTab}>{category}</button
+					class="category-btn active cursor-pointer hover:bg-primary"
+					onclick={() => console.log(category)}>{category}</button
 				>
 			{/each}
 		</div>
