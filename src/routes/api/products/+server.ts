@@ -1,7 +1,6 @@
-// import { json } from '@sveltejs/kit';
-// import type { RequestHandler } from './$types';
+import { json } from '@sveltejs/kit';
 // import { db } from '$lib/server/db';
-// import { products } from '$lib/server/db/schema';
+// import { products } from '$lib/server/schema';
 // import { like, and, gte, lte, eq, or, desc, asc, count } from 'drizzle-orm';
 // import { productQuerySchema, productSchema } from '$lib/validation/product';
 // import { handleError, AppError } from '$lib/utils/errors';
@@ -83,35 +82,49 @@
 // 	}
 // };
 
-// export const POST: RequestHandler = async ({ request }) => {
-// 	try {
-// 		const body = await request.json();
+export const POST = async ({ request }) => {
+	try {
+    const body = await request.json();
+    console.log(body);
 
-// 		// Validate input
-// 		const validatedData = productSchema.parse(body);
+		// Validate input
+		// const validatedData = productSchema.parse(body);
+		// // Check if product already exists
+		// const existing = await db
+		// 	.select()
+		// 	.from(products)
+		// 	.where(eq(products.name, validatedData.name))
+		// 	.get();
+		// if (existing) {
+		// 	throw new AppError('Product with this name already exists', 409, 'PRODUCT_EXISTS');
+		// }
+		// // Insert product
+		// const newProduct = await db
+		// 	.insert(products)
+		// 	.values({
+		// 		...validatedData,
+		// 		updatedAt: new Date()
+		// 	})
+		// 	.returning();
+		// return json({ product: newProduct[0] }, { status: 201 });
+	} catch (error) {
+		// return handleError(error);
+		console.log(error);
+	}
+};
 
-// 		// Check if product already exists
-// 		const existing = await db
-// 			.select()
-// 			.from(products)
-// 			.where(eq(products.name, validatedData.name))
-// 			.get();
+export const GET = async ({ request, url }) => {
+	const authHeader = request.headers.get('Authorization');
 
-// 		if (existing) {
-// 			throw new AppError('Product with this name already exists', 409, 'PRODUCT_EXISTS');
-// 		}
+	if (authHeader !== 'admin') {
+		return json({ message: 'invalid  product' }, { status: 401 });
+	}
 
-// 		// Insert product
-// 		const newProduct = await db
-// 			.insert(products)
-// 			.values({
-// 				...validatedData,
-// 				updatedAt: new Date()
-// 			})
-// 			.returning();
+	const limit = Number(url.searchParams.get('limit') ?? '5');
+	const skip = Number(url.searchParams.get('skip') ?? '0');
 
-// 		return json({ product: newProduct[0] }, { status: 201 });
-// 	} catch (error) {
-// 		return handleError(error);
-// 	}
-// };
+	const res = await fetch(`/src/routes/products?limit=${limit}&skip=${skip}`);
+	const data = res.json();
+
+	return new Response(JSON.stringify(data), { status: 200 });
+};

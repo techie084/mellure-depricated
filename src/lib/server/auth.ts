@@ -17,9 +17,12 @@ const _auth = betterAuth({
 	},
 	secret: BETTER_AUTH_SECRET,
 	database: drizzleAdapter(db, {
-		provider: 'sqlite',
+		provider: 'pg',
 		schema
 	})
 });
 
 export const auth = _auth;
+export type Auth = typeof _auth;
+export type User = typeof _auth.$Infer.Session.user;
+export type Session = typeof _auth.$Infer.Session.session;

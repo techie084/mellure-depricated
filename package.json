@@ -27,6 +27,7 @@
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.1.17",
 		"@types/node": "^24.10.1",
+		"@zerodevx/svelte-toast": "^0.9.6",
 		"drizzle-kit": "^0.31.6",
 		"eslint": "^9.39.1",
 		"eslint-config-prettier": "^10.1.8",

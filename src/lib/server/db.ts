@@ -1,22 +1,46 @@
+import 'dotenv/config';
 import { drizzle } from 'drizzle-orm/neon-http';
 import { neon } from '@neondatabase/serverless';
-import { env } from '$env/dynamic/private';
-import * as schema from './schema';
+import { DATABASE_URL } from '$env/static/private';
+import { users } from './schema';
 
-let db: ReturnType<typeof drizzle>;
-
-const sql = neon(env.DATABASE_URL);
-// eslint-disable-next-line prefer-const
-db = drizzle({ client: sql, schema });
+const sql = neon(DATABASE_URL, {});
+const db = drizzle(sql);
 console.log('✅ Database connected successfully');
 
-// try {
-// 	const sql = neon(env.DATABASE_URL);
-// 	db = drizzle({ client: sql, schema });
-// 	console.log('✅ Database connected successfully');
-// } catch (error) {
-// 	console.error('❌ Failed to connect to database:', error);
-// 	throw error;
-// }
+const main = async () => {
+	const user: typeof users.$inferInsert = {
+		name: 'John',
+		age: 30,
+		email: 'john@example.com'
+	};
+
+	await db.insert(users).values(user);
+	console.log('New user created!');
+
+	const users = await db.select().from(users);
+	console.log('Getting all users from the database: ', users);
+	/*
+  const users: {
+    id: number;
+    name: string;
+    age: number;
+    email: string;
+  }[]
+  */
+
+	await db
+		.update(users)
+		.set({
+			age: 31
+		})
+		.where(eq(users.email, user.email));
+	console.log('User info updated!');
+
+	await db.delete(users).where(eq(users.email, user.email));
+	console.log('User deleted!');
+};
+
+main();
 
 export { db };
