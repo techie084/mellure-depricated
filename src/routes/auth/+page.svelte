@@ -3,7 +3,7 @@
 	import { signIn } from '$lib/auth-client';
 	import { toast } from '@zerodevx/svelte-toast';
 
-	let { data, form } = $props();
+	let { data } = $props();
 	console.log(data);
 
 	// const handleEmailLogin = async (e) => {
@@ -18,7 +18,7 @@
 
 <div class="mx-auto max-w-md p-8">
 	<h1 class="mb-6 text-3xl font-bold">Login 😎</h1>
-	
+
 	<!-- {#if form?.error}
 		<div class="mb-4 rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700">
 			{form?.message}

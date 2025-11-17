@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { signOut, useSession } from '$lib/auth-client';
+	import { signOut } from '$lib/auth-client';
 	import { LogOut, ChevronLeft, UserRoundPlus } from '@lucide/svelte';
 
-	const session = useSession();
+	// const session = useSession();
+
+	let { data } = $props();
 </script>
 
 <!-- Account Page -->
@@ -53,7 +55,7 @@
 							<UserRoundPlus class="h-6 w-6 text-primary" />
 						</div>
 						<div>
-							<h3 id="account-name">{$session.data?.user.name}</h3>
+							<h3 id="account-name">{await data.user}</h3>
 							<p id="account-email-2" class="text-sm text-muted-foreground"></p>
 						</div>
 					</div>

@@ -1,5 +1,6 @@
-export const load = () => {
+import type { PageLoad } from './$types';
 
-  const products = 
+export const load: PageLoad = () => {
+	const products = ['glasses'];
 	return { products };
 };
